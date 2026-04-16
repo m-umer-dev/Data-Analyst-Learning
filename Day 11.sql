@@ -93,3 +93,61 @@ LEFT JOIN orders AS o
 ON c.customer_id = o.customer_id
 GROUP BY c.name, c.city
 ORDER BY total_spent DESC;
+
+SELECT
+	c.name as customer_name,
+    o.product,
+    o.amount AS order_amount
+from customers c
+INNER JOIN orders o
+on c.customer_id = o.customer_id
+order by order_amount DESC;
+
+SELECT
+	c.name as customer_name,
+    c.city,
+    count(o.order_id) as total_orders
+from customers c
+inner JOIN orders o
+on c.customer_id = o.customer_id
+GROUP by c.name
+HAVING total_orders > 1
+order by total_orders DESC;
+
+SELECT
+	c.name as customer_name,
+    c.city,
+    o.order_id,
+    o.order_date
+from customers c
+inner JOIN orders o
+on c.customer_id = o.customer_id
+order by o.order_date DESC;
+
+SELECT
+	c.name as customer_name,
+    o.product,
+    o.amount AS order_amount
+from customers c
+INNER JOIN orders o
+on c.customer_id = o.customer_id
+order by order_amount DESC LIMIT 5;
+
+SELECT
+	c.name as customer_name,
+    c.city,
+    o.amount
+from customers c
+inner JOIN orders o
+on c.customer_id = o.customer_id
+where o.amount > 500
+order by o.amount DESC;
+
+SELECT
+	c.name as customer_name,
+    c.city,
+    o.order_id
+from customers c
+inner JOIN orders o
+on c.customer_id = o.customer_id
+where c.city = 'Lahore';
