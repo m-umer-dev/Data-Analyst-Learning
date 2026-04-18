@@ -1,0 +1,23 @@
+NETFLIX CONTENT ANALYSIS — KEY INSIGHTS
+
+Insight 1 — Content Mix:
+Netflix has 69.62% Movies and 30.38% TV Shows showing
+their strategy focuses more on Movies!
+
+Insight 2 — Geographic Dominance:
+United States produces 32% of all content
+followed by Movies and TV Shows!
+
+Insight 3 — Target Audience:
+The most common rating is TV-MA suggesting
+Netflix primarily targets TV-MA audience!
+
+Insight 4 — Content Growth:
+Netflix significantly increased content
+additions from 2016 onwards showing
+aggressive expansion strategy!
+
+Insight 5 — Data Quality Issue:
+0% of director data is missing which
+could impact creator analytics and
+recommendation systems!
