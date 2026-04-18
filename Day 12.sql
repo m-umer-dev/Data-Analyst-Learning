@@ -21,3 +21,32 @@ WHERE country IS NOT NULL
 GROUP BY country
 ORDER BY title_count DESC
 LIMIT 10;
+
+SELECT
+    country,
+    COUNT(*) AS title_count
+FROM netflix
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY title_count DESC
+LIMIT 10;
+
+SELECT
+    country,
+    type,
+    COUNT(*) AS counts
+FROM netflix
+WHERE country IS NOT NULL
+GROUP BY country, type
+ORDER BY counts DESC
+LIMIT 20;
+
+SELECT
+    director,
+    COUNT(*) AS title_count,
+    COUNT(DISTINCT type) AS content_types
+FROM netflix
+WHERE director IS NOT NULL
+GROUP BY director
+ORDER BY title_count DESC
+LIMIT 10;
